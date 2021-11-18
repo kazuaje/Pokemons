@@ -1,0 +1,13 @@
+.main {
+    background: #fff;
+    padding: 30px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 10%;
+}
+
+.btn-info {
+    background: #6457EE;
+    border-color:#6457EE;
+}

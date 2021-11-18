@@ -1,0 +1,10 @@
+.range {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+}
+.btn-info {
+    background: #6457EE;
+    border-color:#6457EE;
+}

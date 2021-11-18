@@ -1,0 +1,38 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Pokemon</h3>
+    </div>
+    <div class="card-body">
+      <form action="" class="row">
+        <div class="col-md-8">
+            <div class="mb-3 row">
+                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" [(ngModel)]="pokemon.name" [ngModelOptions]="{standalone: true}" class="form-control" id="inputNombre">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputImagen" class="col-sm-2 col-form-label">Imagen</label>
+                <div class="col-sm-10">
+                    <input type="text" [(ngModel)]="pokemon.image" class="form-control" id="inputImagen">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="range">
+                <label for="customRange1" class="form-label">Ataque</label>
+                <input type="range" [(ngModel)]="pokemon.attack" min="0" max="100" step="1" class="form-range" id="customRange1">
+            </div>
+            <div class="range">
+                <label for="customRange1" class="form-label">Defensa</label>
+                <input type="range" [(ngModel)]="pokemon.defense" min="0" max="100" step="1" class="form-range" id="customRange1">
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+          <button (click)="Guardar()" class="btn btn-info mr-3" disabled>Guardar</button>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>
