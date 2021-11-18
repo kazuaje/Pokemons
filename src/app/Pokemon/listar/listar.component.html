@@ -1,0 +1,28 @@
+<div class="container">
+  <input class="form-control" [(ngModel)]="filterPokemon" [ngModelOptions]="{standalone: true}" name="filterPokemon" placeholder="Buscar por nombre..." type="text"  />
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Tipo</th>
+            <th>Ataque</th>
+            <th>Defensa</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Pokemon of pokemons | filter: filterPokemon" class="text-center">
+            <td>{{Pokemon.name}}</td>
+            <td><img width="50px" height="50px" src="{{Pokemon.image}}" alt=""></td>
+            <td>{{Pokemon.type}}</td>
+            <td>{{Pokemon.attack}}</td>
+            <td>{{Pokemon.defense}}</td>
+            <td>
+              <button (click)="Editar(Pokemon)" class="btn"><span class="edit-btn"></span></button>
+              <button (click)="Delete(Pokemon)" class="btn"><span class="delete-btn"></span></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
